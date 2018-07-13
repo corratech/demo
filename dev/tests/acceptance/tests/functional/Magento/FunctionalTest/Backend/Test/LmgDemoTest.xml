@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ /**
+  * Copyright © Magento, Inc. All rights reserved.
+  * See COPYING.txt for license details.
+  */
+-->
+<!-- Test XML Example -->
+<tests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../../../vendor/magento/magento2-functional-testing-framework/src/Magento/FunctionalTestingFramework/Test/etc/testSchema.xsd">
+    <test name="LmgDemoTest">
+        <annotations>
+            <title value="Lmg Demo Test (Admin Login Test)"/>
+            <features value="Backend" />
+            <stories value="I should be able to login to backend" />
+            <group value="lmgdemo" />
+        </annotations>
+        <!-- Navigate to Backend -->
+        <amOnPage url="admin" stepKey="navigateToBackend" />
+        
+        <!-- Fill in the username -->
+        <fillField stepKey="fillIntheUsername" selector="#username" userInput="lijith" />
+
+        <!-- Fill in the password -->
+        <fillField stepKey="fillInthePassword" selector="#login" userInput="lijith@corra123" />
+
+        <!-- Click the Login button -->
+        <click stepKey="clickLoginAction" selector=".action-login.action-primary" />
+
+        <waitForPageLoad stepKey="waitForDashboard" time="5" />
+
+        <!-- Assert we've login successfully -->
+        <seeInCurrentUrl stepKey="assertWeAreOnDashboard" url="dashboard" />
+
+    </test>
+</tests>
