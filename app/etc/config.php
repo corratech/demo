@@ -70,7 +70,6 @@ return [
         'Magento_Email' => 1,
         'Magento_CurrencySymbol' => 1,
         'Magento_CustomAttributeManagement' => 1,
-        'Corra_Language' => 1,
         'Magento_Analytics' => 1,
         'Magento_CustomerBalance' => 1,
         'Magento_CustomerBalanceSampleData' => 1,
